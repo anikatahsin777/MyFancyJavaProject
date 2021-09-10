@@ -1,6 +1,15 @@
 public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!!!"); 
-        System.out.println("Changed."); 
+
+    private static HelloWorld instance = new HelloWorld();
+    private HelloWorld(){}
+
+    public static HelloWorld getInstance(){
+      return instance;
+    }
+
+    public void showText(){
+      System.out.println("Hello, World!");
+      System.out.println("Changed.");
+
     }
 }
